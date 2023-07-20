@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <style>
+        /* body {
+        /* background: #ffc800; 
+        /* background: linear-gradient(to right, #0062E6, #33AEFF); 
+        } */
+
+        .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+            background-color: #ffc800;
+        }
+        
+        .cascading-right {
+            margin-right: -50px;
+        }
+
+        @media (max-width: 991.98px) {
+        .cascading-right {
+            margin-right: 0;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="/images/lion_caption.png" height="60" alt="Lion">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/" class="nav-item nav-link active">Home</a>
+                    </div>
+                    <div class="navbar-nav ms-auto"></div>
+                        <a href="#" class="navbar-brand">
+                            <img src="/images/ind_flag.jpg" height="60" alt="Flag">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div> 
+    
+    <form method="post" action="/userInfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-12 mx-auto">
+                    <div class="card border-0 shadow rounded-3 my-5">
+                        <div class="card-body p-4 p-sm-5">
+                            <h3 class="card-title text-center mb-5  fs-5" ><b>INFORMATION OF USER</b></h3>
+                            <div class="row">
+
+                                <div class="col-md-12"><b>Aadhar Number:</b> <%= userData[0].birth %></div>
+                                <div class="col-md-6"><b>First Name:</b> <%= userData[0].first_name %></div>
+                                <div class="col-md-6"><b>Last Name:</b> <%= userData[0].last_name %></div>
+
+                                <div class="col-md-6"><b>Father Name:</b> <%= userData[0].father_name %></div>
+                                <div class="col-md-6"><b>Mother Name:</b> <%= userData[0].mother_name %></div>
+
+                                <div class="col-md-12"><b>Phone Number:</b> <%= userData[0].mobile %></div>
+                                
+                                <div class="col-md-6"><b>Gender: </b> <%= userData[0].gender %></div>
+                                <div class="col-md-6"><b>Date of Birth: </b> <%= userData[0].dob.toString().substring(4,15) %></div>
+
+                                <div class="col-md-6"><b>Marital Status: </b> <%= userData[0].marital %></div>
+                                <div class="col-md-6"><b>Employement:</b> <%= userData[0].employment %></div>
+
+                                <div class="col-md-6"><b>State: </b> <%= userData[0].stateSel %></div>
+                                <div class="col-md-6"><b>District:</b> <%= userData[0].districtSel %></div>
+                                <div class="col-md-12"><b>Address:</b> <%= userData[0].address %></div>
+                                <div class="col-md-12"><b>Email:</b> <%= userData[0].email %></div>
+                            </div>
+                            <br>
+                            <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit" class="btn btn-warning btn-lg ms-2">Edit</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </form>
+
+
+</body>
+</html>

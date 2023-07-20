@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/979879318/?random=1653674124463&amp;cv=9&amp;fst=1653674124463&amp;num=1&amp;label=uIBJCPv423AQlouf0wM&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=720&amp;u_w=1280&amp;u_ah=672&amp;u_aw=1280&amp;u_cd=24&amp;u_his=3&amp;u_tz=330&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2wg5p1&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fmdbootstrap.com%2Fdocs%2Fstandard%2Fextended%2Fregistration%2F&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;tiba=Bootstrap%20Registration%20form%20-%20free%20examples%20%26%20tutorial&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <title>Admin Register</title>
+    <style>
+        .card-body{
+            align-items: center;
+        }
+        .card-registration .select-input.form-control[readonly]:not([disabled]) {
+            font-size: 1rem;
+            line-height: 2.15;
+            padding-left: .75em;
+            padding-right: .75em;
+        }
+
+        .card-registration .select-arrow {
+            top: 13px;
+        }
+
+        .form-outline mb-4 {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="m-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="/public/images/lion_caption.png" height="60" alt="Lion">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/" class="nav-item nav-link active">Home</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
+                        <a href="/help" class="nav-item nav-link">Help</a>
+                        <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a>
+                    </div>
+                    <div class="navbar-nav ms-auto"></div>
+                        <a href="#" class="navbar-brand">
+                            <img src="/public/images/ind_flag.jpg" height="60" alt="Flag">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <form action="/admin" method="POST" autocomplete="off">
+        <div class="container py-5 h-100">
+            <div class="row dflex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration my-2">
+                        <div class="row g-0">
+                            <div class="col-xl-8">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">Admin Registration</h3>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="birth" name="birth" class="form-control form-control-lg" required/>
+                                        <label class="form-label" for="birth">Birth ID</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="first_name" name="first_name" class="form-control form-control-lg" required/>
+                                                <label class="form-label" for="first_name">First name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" id="last_name" name="last_name" class="form-control form-control-lg"required />
+                                                <label class="form-label" for="last_name">Last name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="father_name" id="father_name" class="form-control form-control-lg" required/>
+                                                <label for="father_name">Father's name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="text" name="mother_name" id="mother_name" class="form-control form-control-lg" required/>
+                                                <label class="form-label" for="mother_name">Mother's name</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" name="mobile" id="mobile" class="form-control form-control-lg" required/>
+                                        <label class="form-label" for="mobile">Phone Number</label>
+                                    </div>
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                                        <h6 class="mb-0 me-4">Gender: </h6>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required/>
+                                            <label class="form-check-label" for="female">Female</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required/>
+                                            <label class="form-check-label" for="male">Male</label>
+                                        </div>
+
+                                        <div class="form-check form-check-inline mb-0">
+                                            <input class="form-check-input" type="radio" name="gender" id="other" value="Other" required/>
+                                            <label class="form-check-label" for="other">Other</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                        <h6 class="mb-0 me-4">Date of Birth: </h6>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input type="date" name="dob" id="dob" class="form-control form-control-lg" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                        <h6 class="mb-0 me-4">Employement Mode: </h6>
+                                        <div class="col-md-6 mb-4">
+                                            <select class="select form-control-lg" id="employment" name="employment" required>
+                                                <option name="employment" value="Employment Mode" disabled>Employement Mode</option>
+                                                <option name="employment" value="Private">Private</option>
+                                                <option name="employment" value="Public">Public</option>
+                                                <option name="employment" value="Student">Student</option>
+                                                <option name="employment" value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 pb-2">
+                                          <div class="form-outline">
+                                            <select class="select form-control-lg" id="stateSel" name="stateSel" size="1" required>
+                                                <option value="" selected="selected">Select State</option>
+                                            </select>
+                                          </div>
+                        
+                                        </div>
+                                        <div class="col-md-6 mb-4 pb-2">
+                                          <div class="form-outline">
+                                            <select class="select form-control-lg" name="districtSel" id="districtSel" size="1" required>
+                                                <option value="" selected="selected">Select State first</option>
+                                            </select>
+                                          </div>
+                        
+                                        </div>
+                                    </div>                        
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" name="address" id="address" class="form-control form-control-lg" required />
+                                        <label class="form-label" for="address">Address</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="text" name="pincode" id="pincode" class="form-control form-control-lg" required/>
+                                        <label class="form-label" for="pincode">Pincode</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="text" id="email" name="email" class="form-control form-control-lg" required/>
+                                        <label class="form-label" for="email">Email ID</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="passwordd" name="passwordd" class="form-control form-control-lg" required/>
+                                        <label class="form-label" for="passwordd">Password</label>
+                                    </div>
+                                    <div class="d-flex justify-content-end pt-3">
+                                        <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                                        <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    </div>
+                                    <div class="d-flex justify-content-center pt-3">
+                                        <span >Already have an account? <a href="adminLogin">Login Here</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
